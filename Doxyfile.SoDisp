@@ -1,0 +1,13 @@
+@INCLUDE                = Doxyfile
+
+PROJECT_BRIEF           = "SharkSSH API and BAS/BWS SoDisp examples"
+OUTPUT_DIRECTORY        = build-sodisp
+PREDEFINED              = HOST_PLATFORM=1 \
+                          SHARKSSL_BA=1 \
+                          SHARKSSH_SODISP_CREATE_SERVER=1 \
+                          SHARKSSH_SODISP_MAIN=1 \
+                          SHARKSSH_SODISP_APPLICATION_HOOKS=1 \
+                          SOC_EMAC_SUPPORTED=1 \
+                          SOC_EMAC_USE_MULTI_IO_MUX=1 \
+                          HTTP_TRACE=1 \
+                          "__attribute__(x)="

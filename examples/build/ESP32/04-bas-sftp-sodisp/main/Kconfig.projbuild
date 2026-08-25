@@ -1,0 +1,72 @@
+menu "SharkSSH ESP32 example"
+
+    config SHARKSSH_ESP_PORT
+        int "SSH server port"
+        range 1 65535
+        default 22
+
+    config SHARKSSH_ESP_STORAGE_MOUNT_POINT
+        string "SFTP FAT filesystem mount point"
+        default "/ssh"
+
+    config SHARKSSH_ESP_MAX_OPEN_FILES
+        int "Maximum open FAT files"
+        range 4 32
+        default 12
+
+    config SHARKSSH_ESP_FORMAT_STORAGE_IF_MOUNT_FAILED
+        bool "Format storage when mounting fails"
+        default y
+
+    config SHARKSSH_ESP_MAX_CONNECTIONS
+        int "Maximum concurrent SSH connections"
+        range 1 16
+        default 4
+
+    config SHARKSSH_ESP_ETH_MDC_GPIO
+        int "Ethernet MDC GPIO"
+        default 31
+
+    config SHARKSSH_ESP_ETH_MDIO_GPIO
+        int "Ethernet MDIO GPIO"
+        default 52
+
+    config SHARKSSH_ESP_ETH_PHY_ADDR
+        int "Ethernet PHY address"
+        range -1 31
+        default 1
+
+    config SHARKSSH_ESP_ETH_PHY_RST_GPIO
+        int "Ethernet PHY reset GPIO"
+        default 51
+
+    config SHARKSSH_ESP_ETH_RMII_CLK_GPIO
+        int "RMII reference clock input GPIO"
+        default 50
+
+    config SHARKSSH_ESP_ETH_RMII_TX_EN_GPIO
+        int "RMII TX_EN GPIO"
+        default 49
+
+    config SHARKSSH_ESP_ETH_RMII_TXD0_GPIO
+        int "RMII TXD0 GPIO"
+        default 34
+
+    config SHARKSSH_ESP_ETH_RMII_TXD1_GPIO
+        int "RMII TXD1 GPIO"
+        default 35
+
+    config SHARKSSH_ESP_ETH_RMII_CRS_DV_GPIO
+        int "RMII CRS_DV GPIO"
+        default 28
+
+    config SHARKSSH_ESP_ETH_RMII_RXD0_GPIO
+        int "RMII RXD0 GPIO"
+        default 29
+
+    config SHARKSSH_ESP_ETH_RMII_RXD1_GPIO
+        int "RMII RXD1 GPIO"
+        default 30
+
+endmenu
+

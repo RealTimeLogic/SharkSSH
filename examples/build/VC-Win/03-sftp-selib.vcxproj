@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{69365C09-4BC5-4D96-8492-09065685EF39}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SharkSshHostSftpSelib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)obj\Debug-Win32\</OutDir>
+    <IntDir>$(ProjectDir)obj\Debug-Win32\intermediate\03-sftp-selib\</IntDir>
+    <TargetName>03-sftp-selib</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\startup;$(ProjectDir)..\..\03-sftp;$(ProjectDir)..\..\..\src\plugins\Shell;$(ProjectDir)..\..\..\src\plugins\Sftp;$(ProjectDir)..\..\..\..\SharkSSL\inc;$(ProjectDir)..\..\..\..\SharkSSL\inc\arch\Windows;$(ProjectDir)..\..\..\..\SharkSSL\src;$(ProjectDir)..\..\..\..\SharkSSL\src\arch\Windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN=1;_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_CONSOLE;_xprintf=printf;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)..\..\..\..\SharkSSL\src\SharkSSL.c" />
+    <ClCompile Include="$(ProjectDir)..\..\..\..\SharkSSL\src\selib.c" />
+    <ClCompile Include="$(ProjectDir)..\..\..\src\SharkSSH.c" />
+    <ClCompile Include="$(ProjectDir)..\..\..\src\SharkSshCrypto.c" />
+    <ClCompile Include="$(ProjectDir)..\..\..\src\plugins\Shell\SharkSshShell.c" />
+    <ClCompile Include="$(ProjectDir)..\..\..\src\plugins\Sftp\SharkSshSftp.c" />
+    <ClCompile Include="$(ProjectDir)..\..\startup\selibStartup.c" />
+    <ClCompile Include="$(ProjectDir)..\..\03-sftp\hostFileSystem.c" />
+    <ClCompile Include="$(ProjectDir)..\..\03-sftp\sftpService.c" />
+    <ClCompile Include="$(ProjectDir)..\..\03-sftp\sftpExample.c" />
+    <ClCompile Include="$(ProjectDir)..\..\03-sftp\example.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

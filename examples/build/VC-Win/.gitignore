@@ -1,0 +1,27 @@
+# Visual Studio local state
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+ipch/
+
+# Compiler and linker output
+obj/
+Debug/
+Release/
+Win32/
+x64/
+*.obj
+*.pch
+*.pdb
+*.idb
+*.ilk
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
+*.log
+*.exe

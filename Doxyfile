@@ -1,0 +1,43 @@
+PROJECT_NAME           = "SharkSSH"
+PROJECT_BRIEF          = "Compact callback-driven SSH server for embedded systems"
+OUTPUT_DIRECTORY       = build
+CREATE_SUBDIRS         = NO
+
+INPUT                  = inc/SharkSSH.h examples
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.c
+EXCLUDE_PATTERNS       = */build/VC-Win/*
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTRACT_ALL            = NO
+EXTRACT_STATIC         = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+SKIP_FUNCTION_MACROS   = NO
+PREDEFINED             = HOST_PLATFORM=1 \
+                         SHARKSSL_BA=0 \
+                         "__attribute__(x)="
+
+JAVADOC_AUTOBRIEF      = YES
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_LOGFILE           =
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+
+GENERATE_LATEX         = NO
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+
+QUIET                  = YES
