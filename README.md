@@ -75,6 +75,26 @@ The expected standalone distribution contains `SharkSSL/inc/SharkSSL.h`,
 distribution contains its public headers under `BAS/inc` and the native BWS
 amalgamation at `BAS/src/BWS.c` (or `BAS/src/BAS.c` for a BAS/Lua application).
 
+## Licensing
+
+SharkSSH is licensed under the [MIT License](LICENSE). This license applies
+only to the files in this repository.
+
+**SharkSSH requires one separately obtained dependency:**
+
+- Standalone `selib` builds require
+  [SharkSSL](https://github.com/RealTimeLogic/SharkSSL), which is available
+  under GPLv2 or a Real Time Logic commercial license.
+- SoDisp builds require
+  [BAS/BWS](https://github.com/RealTimeLogic/BAS/), which is available under
+  GPLv2 or a Real Time Logic commercial license.
+
+SharkSSH's MIT license does not change or replace the license of either
+dependency. Review the applicable dependency license before distributing a
+combined application. Real Time Logic also offers a
+[free commercial license for eligible small companies](https://realtimelogic.com/startuplic/)
+and [standard commercial licensing](https://realtimelogic.com/contactus/license/).
+
 ## Start here
 
 For the fastest route to a working server:
